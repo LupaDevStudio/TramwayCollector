@@ -1,0 +1,167 @@
+#:kivy 2.1.0
+<ImageEditionWindow>:
+    TopMenuLayout:
+        id: top_menu_layout
+
+    FloatLayout:
+        id: screen_layout
+        size_hint: 1, 0.9
+
+        FocusableTextInput:
+            id: name_gallery_input
+            text: root.gallery_name
+            disabled: False if root.is_new_gallery else True
+            size_hint: 0.6, 0.05
+            pos_hint: {"x": 0.2, "y": 0.9}
+            hint_text: root.gallery_name_hint_text
+            font_name: root.font
+
+        Button:
+            text: root.browse_button_text
+            disabled: False if root.is_new_image else True
+            size_hint: 0.35, 0.05
+            pos_hint: {"x": 0.1, "y": 0.8}
+            font_name: root.font
+            on_release:
+                root.show_load()
+            
+        Button:
+            text: root.delete_button_text
+            font_name: root.font
+            disabled: True if root.is_new_image else False
+            size_hint: 0.35, 0.05
+            pos_hint: {"x": 0.55, "y": 0.8}
+            on_release:
+                root.create_popup_delete_confirmation()
+
+        AsyncImage:
+            id: preview_image
+            source: root.path_preview_image
+            allow_stretch: True
+            size_hint: (1, 0.25)
+            pos_hint: {"center_x": 0.5, "y": 0.5}
+            no_cache: True
+
+        # Define the category
+        GridLayout:
+            pos_hint: {"center_x":0.5, "y": 0.35}
+            size_hint: 0.8, 0.1
+            cols: 3
+            FloatLayout:
+                Image:
+                    id: gold_image
+                    source: root.dict_category_images["gold"][0] if root.category == "gold" else root.dict_category_images["gold"][1] 
+                    size_hint_x: None
+                    width: self.height
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                Button:
+                    size_hint_x: None
+                    width: self.height
+                    background_color: 0, 0, 0, 0
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                    on_release:
+                        root.category = "gold"
+            FloatLayout:
+                Image:
+                    id: silver_image
+                    source: root.dict_category_images["silver"][0] if root.category == "silver" else root.dict_category_images["silver"][1] 
+                    size_hint_x: None
+                    width: self.height
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                Button:
+                    size_hint_x: None
+                    width: self.height
+                    background_color: 0, 0, 0, 0
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                    on_release:
+                        root.category = "silver"
+            FloatLayout:
+                Image:
+                    id: bronze_image
+                    source: root.dict_category_images["bronze"][0] if root.category == "bronze" else root.dict_category_images["bronze"][1] 
+                    size_hint_x: None
+                    width: self.height
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                Button:
+                    size_hint_x: None
+                    width: self.height
+                    background_color: 0, 0, 0, 0
+                    pos_hint: {"center_x":0.5, "center_y":0.5}
+                    on_release:
+                        root.category = "bronze"
+
+        # Define the side
+        ToggleButton:
+            id: left_side_toggle
+            text: root.left_side_label
+            font_name: root.font
+            pos_hint: {"x": 0.1, "y": 0.25}
+            size_hint: 0.35, 0.05
+            group: "side"
+            state_image: self.background_focus if root.side_tramway == "left" else self.background_normal
+            on_release:
+                root.side_tramway = "left" if root.side_tramway != "left" else "None"
+        ToggleButton:
+            id: right_side_toggle
+            text: root.right_side_label
+            font_name: root.font
+            pos_hint: {"x": 0.55, "y": 0.25}
+            size_hint: 0.35, 0.05
+            group: "side"
+            state_image: self.background_focus if root.side_tramway == "right" else self.background_normal
+            on_release:
+                root.side_tramway = "right" if root.side_tramway != "right" else "None"
+
+        # Define the default image
+        ToggleButton:
+            text: root.on_label if root.bool_default else root.off_label
+            font_name: root.font
+            state_image: self.background_focus if root.bool_default else self.background_normal
+            pos_hint: {"x": 0.7, "y": 0.15}
+            size_hint: 0.2, 0.05
+            on_release:
+                root.bool_default = not root.bool_default
+        Label:
+            text: root.default_label
+            font_name: root.font
+            pos_hint: {"x": 0.1, "y": 0.15}
+            size_hint: 0.4, 0.05
+            color: root.manager.color_label
+
+        # Define plus plus
+        Image:
+            source: root.plus_plus_images[0] if root.bool_plus_plus else root.plus_plus_images[1] 
+            size_hint: None, 0.05
+            pos_hint: {"x": 0.1, "y": 0.05}
+            width: self.height
+        Button:
+            size_hint: None, 0.05
+            pos_hint: {"x": 0.1, "y": 0.05}
+            width: self.height
+            background_color: (0, 0, 0, 0)
+            on_release:
+                root.bool_plus_plus = not root.bool_plus_plus
+
+        # Add image
+        Button:
+            id: add_button
+            text: root.add_button_text if root.is_new_image else root.modify_button_text
+            font_name: root.font
+            size_hint: 0.4, 0.05
+            pos_hint: {"x": 0.3, "y": 0.05}
+            on_release:
+                root.add_image()
+
+        # Share image
+        Image:
+            source: "resources/share.png"
+            size_hint: None, 0.05
+            pos_hint: {"right": 0.9, "y": 0.05}
+            width: self.height
+        Button:
+            size_hint: None, 0.05
+            pos_hint: {"right": 0.9, "y": 0.05}
+            width: self.height
+            background_color: (0, 0, 0, 0)
+            on_release:
+                root.share_image()

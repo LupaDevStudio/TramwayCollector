@@ -1,0 +1,123 @@
+{
+    "collection": {
+        "new_gallery": "Nuova galleria"
+    },
+    "gallery": {
+        "gallery_name_hint_text": "Nome galleria"
+    },
+    "image_edition": {
+        "gallery_name_hint_text": "Nome galleria",
+        "browse_button": "Sfoglia...",
+        "delete_button": "Elimina",
+        "left_side": "Lato sinistro",
+        "right_side": "Lato destro",
+        "default_label": "Imposta come copertina",
+        "add_button": "Aggiungi",
+        "modify_button": "Modifica",
+        "on": "On",
+        "off": "Off",
+        "load_image": "Carica immagine"
+    },
+    "settings": {
+        "credits_popup": {
+            "title_popup": "Crediti",
+            "label_popup": "Questa applicazione è stata sviluppata da:\n - Paul\n - Agathe\n\nVersione ###"
+        },
+        "language": "Lingua",
+        "statistics": {
+            "title": "Statistiche",
+            "gallery": "galleria",
+            "galleries": "gallerie"
+        },
+        "import_collection": "Importa collezione",
+        "export_collection": "Seleziona cartella di esportazione",
+        "tutorial": {
+            "title": "Tutorial",
+            "cancel_button": "Annulla",
+            "finish_button": "Fine",
+            "left_button": "Precedente",
+            "right_button": "Successivo",
+            "tutorial_content": {
+                "welcome": {
+                    "title": "Tutorial di benvenuto",
+                    "message": "Benvenuto in Tramway Collector!"
+                },
+                "menu": {
+                    "title": "Menu principale",
+                    "message": "In questo menu, che si apre all'avvio, vengono mostrate tutte le tue gallerie.\nPuoi aggiungere una galleria facendo clic sull'ultima immagine della lista. Verrai quindi reindirizzato al menu di aggiunta immagini.\nPuoi anche fare clic su un'immagine per accedere alla relativa galleria."
+                },
+                "gallery": {
+                    "title": "Galleria",
+                    "message": "In questo menu vengono mostrate tutte le immagini della galleria, suddivise per lato del tram.\nPuoi aggiungere un'immagine a questa galleria facendo clic sul pulsante in alto a sinistra, accanto all'area di testo per modificare il nome della galleria.\nPuoi anche modificare un'immagine facendo clic su di essa."
+                },
+                "add_image": {
+                    "title": "Aggiunta immagine",
+                    "message": "In questo menu puoi aggiungere una nuova immagine a una nuova o esistente galleria.\nDopo aver caricato l'immagine, potrai selezionare il lato e la categoria dell'immagine e se sarà la nuova copertina della galleria. Se si tratta di una nuova galleria, devi inserire il suo nome nell'apposito campo di testo."
+                },
+                "choice_side": {
+                    "title": "Scelta del lato",
+                    "message": "Con questi pulsanti puoi scegliere il lato del tram da mostrare nella foto."
+                },
+                "choice_category": {
+                    "title": "Scelta della categoria",
+                    "message": "Con questi pulsanti puoi scegliere la categoria che rappresenta la qualità dell'immagine."
+                },
+                "default": {
+                    "title": "Impostazione copertina",
+                    "message": "Con questo pulsante puoi decidere se la nuova immagine sarà la copertina di questa galleria nel menu collezione."
+                },
+                "edit_image": {
+                    "title": "Modifica immagine",
+                    "message": "Questo menu offre le stesse funzionalità del menu di aggiunta immagine, con l'eccezione che l'utente può eliminare l'immagine in questione.\nVerrà visualizzata una finestra di conferma e, una volta confermata, questa azione non può essere annullata."
+                },
+                "collection": {
+                    "title": "Collezione",
+                    "message": "Nel menu collezione, accessibile facendo clic sul libro nel menu principale, puoi vedere il progresso della tua collezione con le immagini impostate come copertina per ogni lato di ogni galleria.\nPuoi anche accedere al menu di aggiunta immagini da questo menu facendo clic sui pulsanti corrispondenti."
+                },
+                "settings": {
+                    "title": "Impostazioni",
+                    "message": "Puoi accedere al menu impostazioni facendo clic sull'icona dell'ingranaggio nel menu principale.\nQui puoi cambiare la lingua dell'applicazione, visualizzare le statistiche della tua collezione e consultare questo tutorial.\nPuoi anche importare una collezione o esportare la collezione attuale. Tieni presente che l'importazione di una nuova collezione comporterà l'eliminazione della collezione attuale."
+                }
+            }
+        }
+    },
+    "generic": {
+        "file_chooser": {
+            "cancel": "Annulla",
+            "load": "Carica"
+        },
+        "popup": {
+            "dict_buttons": {
+                "close": "Chiudi finestra",
+                "yes": "Sì",
+                "no": "No"
+            },
+            "dict_messages": {
+                "delete_confirmation": [
+                    "Conferma eliminazione",
+                    "Desideri eliminare questa immagine?\n\nQuesta azione è irreversibile."
+                ],
+                "import_completed": [
+                    "Importazione completata",
+                    "La collezione è stata importata correttamente."
+                ],
+                "export_completed": [
+                    "Esportazione completata",
+                    "La collezione è stata esportata correttamente."
+                ],
+                "error_gallery_name": [
+                    "Errore nel nome della galleria",
+                    "Il nome di questa galleria esiste già. Inserisci un nuovo nome."
+                ],
+                "error_no_side": [
+                    "Lato non selezionato",
+                    "Non è stato selezionato il lato del tram nella foto, sinistro o destro."
+                ],
+                "error_no_category": [
+                    "Categoria non selezionata",
+                    "Non è stata selezionata la categoria della foto, oro, argento o bronzo."
+                ]
+            }
+        }
+    }
+}

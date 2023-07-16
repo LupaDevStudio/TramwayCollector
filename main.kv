@@ -1,0 +1,66 @@
+#:kivy 2.1.0
+#: import ew kivy.uix.effectwidget
+
+WindowManager:
+    MenuWindow:
+        name: "menu"
+    CollectionWindow:
+        name: "collection"
+    GalleryWindow:
+        name: "gallery"
+    ImageEditionWindow:
+        name: "image_edition"
+    SettingsWindow:
+        name: "settings"
+
+
+#######################
+### Generic classes ###
+#######################
+
+
+<TopMenuLayout>:
+    size_hint: 1, 0.1
+    pos_hint: {"x": 0, "top": 1}
+    Image:
+        source: root.path_resources + "logo.png"
+        size_hint: 0.5, 0.6
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        allow_stretch: True
+    Button:
+        id: return_button
+        size_hint: 0.5, 0.6
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        background_color: 0, 0, 0, 0
+
+<LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            path: root.default_path
+            filters: root.filters_list
+
+        BoxLayout:
+            size_hint_y: None
+            height: root.height/12
+            Button:
+                text: root.cancel_label
+                on_release: root.cancel()
+                font_name: root.font
+
+            Button:
+                text: root.load_label
+                on_release: root.load(filechooser.path, filechooser.selection)
+                font_name: root.font
+
+
+    Widget:
+        canvas:
+            Color:
+                rgba: root.pink_color
+            Rectangle:
+                pos: root.x, root.top
+                size: self.width, dp(3)

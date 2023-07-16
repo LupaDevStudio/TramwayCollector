@@ -1,0 +1,10 @@
+draft*
+*_test*
+__pycache__
+.coverage
+coverage.xml
+.buildozer
+.vscode
+*.jks
+*.pem
+PlayStore

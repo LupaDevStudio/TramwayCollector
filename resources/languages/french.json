@@ -1,0 +1,123 @@
+{
+    "collection": {
+        "new_gallery": "Nouvelle galerie"
+    },
+    "gallery": {
+        "gallery_name_hint_text": " Nom de la galerie"
+    },
+    "image_edition": {
+        "gallery_name_hint_text": " Nom de la galerie",
+        "browse_button": "Charger...",
+        "delete_button": "Supprimer",
+        "left_side": "Côté gauche",
+        "right_side": "Côté droit",
+        "default_label": "Définir comme couvercle",
+        "add_button": "Ajouter",
+        "modify_button": "Modifier",
+        "on": "Oui",
+        "off": "Non",
+        "load_image": "Chargement d'une image"
+    },
+    "settings": {
+        "credits_popup": {
+            "title_popup": "Crédits",
+            "label_popup": "Cette application a été développée par :\n - Paul\n - Agathe\n\nVersion ###"
+        },
+        "language": "Langue",
+        "statistics": {
+            "title": "Statistiques",
+            "gallery": " tramway",
+            "galleries": " tramways"
+        },
+        "import_collection": "Importer une collection",
+        "export_collection": "Choix du dossier d'export",
+        "tutorial": {
+            "title": "Tutoriel",
+            "cancel_button": "Annuler",
+            "finish_button": "Terminer",
+            "left_button": "Précédent",
+            "right_button": "Suivant",
+            "tutorial_content": {
+                "welcome": {
+                    "title": "Tutoriel de bienvenue",
+                    "message": "Bienvenue dans Tramway Collector !"
+                },
+                "menu": {
+                    "title": "Menu général",
+                    "message": "Dans ce menu ouvert au démarrage, toutes vos galeries sont affichées.\nVous pouvez ajouter une galerie en cliquant sur la dernière image de la liste. Vous serez alors redirigé vers le menu d'ajout d'images.\nVous pouvez aussi cliquer sur une image pour vous rendre dans la galerie correspondante."
+                },
+                "gallery": {
+                    "title": "Galerie",
+                    "message": "Dans ce menu, toutes les images de la galerie sont affichées, réparties selon le côté du tramway.\nVous pouvez ajouter une image dans cette galerie en cliquant sur le bouton en haut à gauche, à côté de la zone de texte pour éditer le nom de la galerie.\nVous pouvez aussi éditer une image en cliquant sur elle."
+                },
+                "add_image": {
+                    "title": "Ajout d'image",
+                    "message": "Ce menu vous permet d'ajouter une nouvelle image dans une galerie nouvelle ou existante.\nAprès avoir chargé l'image, vous pourrez sélectionner le côté et la catégorie de l'image, et s'il s'agit du nouveau couvercle de la galerie. S'il s'agit d'une nouvelle galerie, vous devez rentrer son nom dans la zone de texte correspondante."
+                },
+                "choice_side": {
+                    "title": "Choix du côté",
+                    "message": "À l'aide de ces boutons, vous pouvez choisir le côté du tramway apparent sur la photo."
+                },
+                "choice_category": {
+                    "title": "Choix de la catégorie",
+                    "message": "À l'aide de ces boutons, vous pouvez choisir la catégorie représentative de la qualité de l'image."
+                },
+                "default": {
+                    "title": "Définition du couvercle",
+                    "message": "À l'aide de ce bouton, vous pouvez choisir si la nouvelle image sera le couvercle de cette galerie dans le menu collection."
+                },
+                "edit_image": {
+                    "title": "Édition d'image",
+                    "message": "Ce menu présente les mêmes fonctionnalités que celui d'ajout d'image, à l'exception près que l'utilisateur peut supprimer l'image en question.\nUne fenêtre de confirmation apparaîtra et, une fois validée, cette action sera irréversible."
+                },
+                "collection": {
+                    "title": "Collection",
+                    "message": "Dans le menu collection atteignable en cliquant sur le livre du menu principal, vous pouvez observer la progression de votre collection avec les images définies comme couvercles pour chaque côté de chaque galerie.\nVous pouvez aussi accéder au menu d'ajout d'images depuis ce menu en cliquant sur les boutons correspondants."
+                },
+                "settings": {
+                    "title": "Paramètres",
+                    "message": "Vous pouvez accéder au menu paramètres en cliquant sur la roue dentelée du menu principal.\nVous pouvez changer ici la langue de l'application, observer les statistiques de votre collection, ainsi que consulter ce tutoriel.\nVous pouvez également importer une collection ou bien exporter celle en cours. Veuillez noter que lors de l'import d'une nouvelle collection celle en cours sera supprimée."
+                }
+            }
+        }
+    },
+    "generic": {
+        "file_chooser": {
+            "cancel": "Annuler",
+            "load": "Charger"
+        },
+        "popup": {
+            "dict_buttons": {
+                "close": "Fermer la fenêtre",
+                "yes": "Oui",
+                "no": "Non"
+            },
+            "dict_messages": {
+                "delete_confirmation": [
+                    "Confirmation de la suppression",
+                    "Souhaitez-vous supprimer cette image ?\n\nCette action est irréversible."
+                ],
+                "import_completed": [
+                    "Import terminé",
+                    "La collection a bien été importée."
+                ],
+                "export_completed": [
+                    "Export terminé",
+                    "La collection a bien été exportée."
+                ],
+                "error_gallery_name": [
+                    "Erreur dans le nom de la galerie",
+                    "Le nom de cette galerie existe déjà. Veuillez en entrer un nouveau."
+                ],
+                "error_no_side": [
+                    "Absence de côté",
+                    "Le côté du tramway sur la photo, gauche ou droite, n'a pas été choisi."
+                ],
+                "error_no_category": [
+                    "Absence de catégorie",
+                    "La catégorie de la photo, or, argent ou bronze, n'a été pas choisie."
+                ]
+            }
+        }
+    }
+}

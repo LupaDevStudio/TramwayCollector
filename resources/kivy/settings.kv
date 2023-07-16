@@ -1,0 +1,211 @@
+#:kivy 2.1.0
+<SettingsWindow>:
+    TopMenuLayout:
+        id: top_menu_layout
+
+    FloatLayout:
+        size_hint: 1, 0.875
+
+        ### Language ###
+        Label:
+            text: root.language_label
+            bold: True
+            pos_hint: {"center_x": 0.5, "y": 0.95}
+            size_hint: 0.4, 0.05
+            color: root.manager.color_label
+            font_name: root.font
+        FocusableSpinner:
+            id: language_spinner
+            text: root.default_language
+            values: root.list_languages
+            pos_hint: {"center_x": 0.5, "y": 0.9}
+            size_hint: 0.4, 0.05
+            font_name: root.font
+            on_text:
+                root.change_language()
+
+        ### Statistics ###
+        GridLayout:
+            size_hint: 1, 0.35
+            pos_hint: {"x": 0, "y": 0.525}
+            cols: 1
+            Label:
+                text: root.statistics_label
+                bold: True
+                color: root.manager.color_label
+                font_name: root.font
+            # Introduction 
+            Label:
+                text: root.statistics_nb_galleries
+                color: root.manager.color_label
+                font_name: root.font
+            # Sides
+            RelativeLayout:
+                Label:
+                    text: root.label_nb_left                  
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "right"
+                    valign: "center"
+                    bold: True
+                    font_name: root.font
+                Label:
+                    text: root.label_nb_right                  
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0.575, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "left"
+                    valign: "center"
+                    bold: True
+                    font_name: root.font
+            # Categories
+            RelativeLayout:
+                Image:
+                    source: root.dict_category_images["gold"]
+                    size_hint: None, 1
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    height: self.width
+                    allow_stretch: True
+                Label:
+                    text: root.statistics_nb_left_gold
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "right"
+                    valign: "center"
+                    font_name: root.font
+                Label:
+                    text: root.statistics_nb_right_gold
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0.575, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "left"
+                    valign: "center"
+                    font_name: root.font
+            RelativeLayout:
+                Image:
+                    source: root.dict_category_images["silver"]
+                    size_hint: None, 1
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    height: self.width
+                    allow_stretch: True
+                Label:
+                    text: root.statistics_nb_left_silver
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "right"
+                    valign: "center"
+                    font_name: root.font
+                Label:
+                    text: root.statistics_nb_right_silver
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0.575, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "left"
+                    valign: "center"
+                    font_name: root.font
+            RelativeLayout:
+                Image:
+                    source: root.dict_category_images["bronze"]
+                    size_hint: None, 1
+                    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+                    height: self.width
+                    allow_stretch: True
+                Label:
+                    text: root.statistics_nb_left_bronze
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "right"
+                    valign: "center"
+                    font_name: root.font
+                Label:
+                    text: root.statistics_nb_right_bronze
+                    size_hint: 0.425, 1
+                    pos_hint: {"x":0.575, "y":0}
+                    color: root.manager.color_label
+                    text_size: self.size
+                    halign: "left"
+                    valign: "center"
+                    font_name: root.font
+
+        ### Tutorial ###
+        Label:
+            text: root.tutorial_label
+            bold: True
+            size_hint: 1, 0.05
+            pos_hint: {"center_x":0.5, "y":0.45}
+            color: root.manager.color_label
+            font_name: root.font
+        Button:
+            background_color: 0, 0, 0, 0
+            size_hint: None, 0.2
+            width: self.height
+            pos_hint: {"center_x":0.5, "y":0.25}
+            font_name: root.font
+            on_release:
+                root.launch_tutorial()
+        FloatLayout:
+            Image:
+                source: "resources/tutoriel.png"
+                allow_stretch: True
+                size_hint: None, 0.2
+                width: self.height
+                pos_hint: {"center_x":0.5, "y":0.25}
+
+        ### Share ###
+        Button:
+            id: share_button
+            background_color: 0, 0, 0, 0
+            size_hint: None, 0.075
+            width: self.height
+            pos_hint: {"x":0.125, "y":0.0875}
+            on_release:
+                root.show_file_explorer("EXPORT")
+        Image:
+            source: "resources/share.png"
+            allow_stretch: True
+            size_hint: None, 0.075
+            width: self.height
+            pos_hint: {"x":0.125, "y":0.0875}
+
+        ### Credits ###
+        Button:
+            id: credits_button
+            background_color: 0, 0, 0, 0
+            size_hint: None, 0.15
+            width: self.height
+            pos_hint: {"center_x":0.5, "y":0.05}
+            on_release:
+                root.display_credits()
+        Image:
+            source: "resources/credits_logo.png"
+            allow_stretch: True
+            size_hint: None, 0.15
+            width: self.height
+            pos_hint: {"center_x":0.5, "y":0.05}
+        
+        ### Import ###
+        Button:
+            id: import_button
+            background_color: 0, 0, 0, 0
+            size_hint: None, 0.075
+            width: self.height
+            pos_hint: {"x":0.8, "y":0.0875}
+            on_release:
+                root.show_file_explorer("IMPORT")
+        Image:
+            source: "resources/import.png"
+            allow_stretch: True
+            size_hint: None, 0.075
+            width: self.height
+            pos_hint: {"x":0.8, "y":0.0875}

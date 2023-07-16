@@ -1,0 +1,123 @@
+{
+    "collection": {
+        "new_gallery": "New gallery"
+    },
+    "gallery": {
+        "gallery_name_hint_text": "Gallery name"
+    },
+    "image_edition": {
+        "gallery_name_hint_text": "Gallery name",
+        "browse_button": "Browse...",
+        "delete_button": "Delete",
+        "left_side": "Left side",
+        "right_side": "Right side",
+        "default_label": "Set as cover",
+        "add_button": "Add",
+        "modify_button": "Modify",
+        "on": "On",
+        "off": "Off",
+        "load_image": "Load image"
+    },
+    "settings": {
+        "credits_popup": {
+            "title_popup": "Credits",
+            "label_popup": "This application was developed by:\n - Paul\n - Agathe\n\nVersion ###"
+        },
+        "language": "Language",
+        "statistics": {
+            "title": "Statistics",
+            "gallery": " tramway",
+            "galleries": " tramways"
+        },
+        "import_collection": "Import collection",
+        "export_collection": "Choose export folder",
+        "tutorial": {
+            "title": "Tutorial",
+            "cancel_button": "Cancel",
+            "finish_button": "Finish",
+            "left_button": "Previous",
+            "right_button": "Next",
+            "tutorial_content": {
+                "welcome": {
+                    "title": "Welcome Tutorial",
+                    "message": "Welcome to Tramway Collector!"
+                },
+                "menu": {
+                    "title": "General Menu",
+                    "message": "In this menu that opens at startup, all your galleries are displayed.\nYou can add a gallery by clicking on the last image in the list. You will then be redirected to the image adding menu.\nYou can also click on an image to go to the corresponding gallery."
+                },
+                "gallery": {
+                    "title": "Gallery",
+                    "message": "In this menu, all the images of the gallery are displayed, divided into the left and right sides of the tramway.\nYou can add an image to this gallery by clicking on the button in the top left, next to the text field to edit the gallery name.\nYou can also edit an image by clicking on it."
+                },
+                "add_image": {
+                    "title": "Add Image",
+                    "message": "This menu allows you to add a new image to a new or existing gallery.\nAfter loading the image, you can select the side and category of the image, and whether it is the new cover of the gallery. If it is a new gallery, you must enter its name in the corresponding text field."
+                },
+                "choice_side": {
+                    "title": "Side Selection",
+                    "message": "Using these buttons, you can choose the side of the tramway visible in the photo."
+                },
+                "choice_category": {
+                    "title": "Category Selection",
+                    "message": "Using these buttons, you can choose the category that represents the quality of the image."
+                },
+                "default": {
+                    "title": "Cover Definition",
+                    "message": "Using this button, you can choose whether the new image will be the cover of this gallery in the collection menu."
+                },
+                "edit_image": {
+                    "title": "Image Editing",
+                    "message": "This menu has the same features as the image adding menu, except that the user can delete the image in question.\nA confirmation window will appear, and once validated, this action will be irreversible."
+                },
+                "collection": {
+                    "title": "Collection",
+                    "message": "In the collection menu, reachable by clicking on the book in the main menu, you can see the progress of your collection with the images set as covers for each side of each gallery.\nYou can also access the image adding menu from this menu by clicking on the corresponding buttons."
+                },
+                "settings": {
+                    "title": "Settings",
+                    "message": "You can access the settings menu by clicking on the gear icon in the main menu.\nHere, you can change the language of the application, view the statistics of your collection, and consult this tutorial.\nYou can also import a collection or export the current one. Please note that when importing a new collection, the current one will be deleted."
+                }
+            }
+        }
+    },
+    "generic": {
+        "file_chooser": {
+            "cancel": "Cancel",
+            "load": "Load"
+        },
+        "popup": {
+            "dict_buttons": {
+                "close": "Close window",
+                "yes": "Yes",
+                "no": "No"
+            },
+            "dict_messages": {
+                "delete_confirmation": [
+                    "Delete Confirmation",
+                    "Do you want to delete this image?\n\nThis action is irreversible."
+                ],
+                "import_completed": [
+                    "Import Completed",
+                    "The collection has been successfully imported."
+                ],
+                "export_completed": [
+                    "Export Completed",
+                    "The collection has been successfully exported."
+                ],
+                "error_gallery_name": [
+                    "Error in Gallery Name",
+                    "The name of this gallery already exists. Please enter a new one."
+                ],
+                "error_no_side": [
+                    "Missing Side",
+                    "The side of the tramway in the photo, left or right, has not been chosen."
+                ],
+                "error_no_category": [
+                    "Missing Category",
+                    "The category of the photo, gold, silver, or bronze, has not been chosen."
+                ]
+            }
+        }
+    }
+}

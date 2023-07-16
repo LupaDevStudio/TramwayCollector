@@ -1,0 +1,123 @@
+{
+    "collection": {
+        "new_gallery": "Nueva galería"
+    },
+    "gallery": {
+        "gallery_name_hint_text": "Nombre de la galería"
+    },
+    "image_edition": {
+        "gallery_name_hint_text": "Nombre de la galería",
+        "browse_button": "Examinar...",
+        "delete_button": "Eliminar",
+        "left_side": "Lado izquierdo",
+        "right_side": "Lado derecho",
+        "default_label": "Establecer como portada",
+        "add_button": "Agregar",
+        "modify_button": "Modificar",
+        "on": "Encendido",
+        "off": "Apagado",
+        "load_image": "Cargar imagen"
+    },
+    "settings": {
+        "credits_popup": {
+            "title_popup": "Créditos",
+            "label_popup": "Esta aplicación fue desarrollada por:\n - Paul\n - Agathe\n\nVersión ###"
+        },
+        "language": "Idioma",
+        "statistics": {
+            "title": "Estadísticas",
+            "gallery": "galería",
+            "galleries": "galerías"
+        },
+        "import_collection": "Importar colección",
+        "export_collection": "Seleccionar carpeta de exportación",
+        "tutorial": {
+            "title": "Tutorial",
+            "cancel_button": "Cancelar",
+            "finish_button": "Finalizar",
+            "left_button": "Anterior",
+            "right_button": "Siguiente",
+            "tutorial_content": {
+                "welcome": {
+                    "title": "Tutorial de bienvenida",
+                    "message": "¡Bienvenido a Tramway Collector!"
+                },
+                "menu": {
+                    "title": "Menú principal",
+                    "message": "En este menú que se abre al iniciar, se muestran todas tus galerías.\nPuedes agregar una galería haciendo clic en la última imagen de la lista. Luego serás redirigido al menú de agregar imágenes.\nTambién puedes hacer clic en una imagen para acceder a la galería correspondiente."
+                },
+                "gallery": {
+                    "title": "Galería",
+                    "message": "En este menú se muestran todas las imágenes de la galería, divididas según el lado del tranvía.\nPuedes agregar una imagen a esta galería haciendo clic en el botón en la esquina superior izquierda, junto al campo de texto para editar el nombre de la galería.\nTambién puedes editar una imagen haciendo clic en ella."
+                },
+                "add_image": {
+                    "title": "Agregar imagen",
+                    "message": "En este menú puedes agregar una nueva imagen a una galería nueva o existente.\nDespués de cargar la imagen, podrás seleccionar el lado y la categoría de la imagen, y si será la nueva portada de la galería. Si es una nueva galería, debes ingresar su nombre en el campo de texto correspondiente."
+                },
+                "choice_side": {
+                    "title": "Elección del lado",
+                    "message": "Con estos botones, puedes elegir el lado del tranvía que se muestra en la foto."
+                },
+                "choice_category": {
+                    "title": "Elección de la categoría",
+                    "message": "Con estos botones, puedes elegir la categoría que representa la calidad de la imagen."
+                },
+                "default": {
+                    "title": "Establecer como portada",
+                    "message": "Con este botón, puedeselegir si la nueva imagen será la portada de esta galería en el menú de colección."
+                },
+                "edit_image": {
+                    "title": "Edición de imagen",
+                    "message": "Este menú ofrece las mismas funciones que el menú de agregar imagen, con la excepción de que el usuario puede eliminar la imagen en cuestión.\nSe mostrará una ventana de confirmación y, una vez confirmada, esta acción no se puede deshacer."
+                },
+                "collection": {
+                    "title": "Colección",
+                    "message": "En el menú de colección, al que puedes acceder haciendo clic en el libro en el menú principal, puedes ver el progreso de tu colección con las imágenes establecidas como portadas para cada lado de cada galería.\nTambién puedes acceder al menú de agregar imágenes desde este menú haciendo clic en los botones correspondientes."
+                },
+                "settings": {
+                    "title": "Configuración",
+                    "message": "Puedes acceder al menú de configuración haciendo clic en el icono de engranaje en el menú principal.\nAquí puedes cambiar el idioma de la aplicación, ver las estadísticas de tu colección y consultar este tutorial.\nTambién puedes importar una colección o exportar la colección actual. Ten en cuenta que al importar una nueva colección, se eliminará la colección actual."
+                }
+            }
+        }
+    },
+    "generic": {
+        "file_chooser": {
+            "cancel": "Cancelar",
+            "load": "Cargar"
+        },
+        "popup": {
+            "dict_buttons": {
+                "close": "Cerrar ventana",
+                "yes": "Sí",
+                "no": "No"
+            },
+            "dict_messages": {
+                "delete_confirmation": [
+                    "Confirmación de eliminación",
+                    "¿Deseas eliminar esta imagen?\n\nEsta acción es irreversible."
+                ],
+                "import_completed": [
+                    "Importación completada",
+                    "La colección se ha importado correctamente."
+                ],
+                "export_completed": [
+                    "Exportación completada",
+                    "La colección se ha exportado correctamente."
+                ],
+                "error_gallery_name": [
+                    "Error en el nombre de la galería",
+                    "El nombre de esta galería ya existe. Por favor, ingresa un nuevo nombre."
+                ],
+                "error_no_side": [
+                    "Lado no seleccionado",
+                    "No se ha seleccionado el lado del tranvía en la foto, izquierdo o derecho."
+                ],
+                "error_no_category": [
+                    "Categoría no seleccionada",
+                    "No se ha seleccionado la categoría de la foto, oro, plata o bronce."
+                ]
+            }
+        }
+    }
+}

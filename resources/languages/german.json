@@ -1,0 +1,123 @@
+{
+    "collection": {
+        "new_gallery": "Neue Galerie"
+    },
+    "gallery": {
+        "gallery_name_hint_text": " Galeriename"
+    },
+    "image_edition": {
+        "gallery_name_hint_text": " Galeriename",
+        "browse_button": "Durchsuchen...",
+        "delete_button": "Löschen",
+        "left_side": "Linke Seite",
+        "right_side": "Rechte Seite",
+        "default_label": "Als Cover festlegen",
+        "add_button": "Hinzufügen",
+        "modify_button": "Bearbeiten",
+        "on": "An",
+        "off": "Aus",
+        "load_image": "Bild laden"
+    },
+    "settings": {
+        "credits_popup": {
+            "title_popup": "Credits",
+            "label_popup": "Diese Anwendung wurde entwickelt von:\n - Paul\n - Agathe\n\nVersion ###"
+        },
+        "language": "Sprache",
+        "statistics": {
+            "title": "Statistiken",
+            "gallery": " Galerie",
+            "galleries": " Galerien"
+        },
+        "import_collection": "Sammlung importieren",
+        "export_collection": "Exportordner auswählen",
+        "tutorial": {
+            "title": "Anleitung",
+            "cancel_button": "Abbrechen",
+            "finish_button": "Fertigstellen",
+            "left_button": "Zurück",
+            "right_button": "Weiter",
+            "tutorial_content": {
+                "welcome": {
+                    "title": "Willkommen zur Anleitung",
+                    "message": "Willkommen bei Tramway Collector!"
+                },
+                "menu": {
+                    "title": "Hauptmenü",
+                    "message": "In diesem beim Start geöffneten Menü werden alle Ihre Galerien angezeigt.\nSie können eine Galerie hinzufügen, indem Sie auf das letzte Bild in der Liste klicken. Sie werden dann zum Menü zum Hinzufügen von Bildern weitergeleitet.\nSie können auch auf ein Bild klicken, um zur entsprechenden Galerie zu gelangen."
+                },
+                "gallery": {
+                    "title": "Galerie",
+                    "message": "In diesem Menü werden alle Bilder der Galerie angezeigt, aufgeteilt nach der Seite der Straßenbahn.\nSie können ein Bild zu dieser Galerie hinzufügen, indem Sie auf die Schaltfläche oben links neben dem Textfeld zum Bearbeiten des Galerienamens klicken.\nSie können auch ein Bild bearbeiten, indem Sie darauf klicken."
+                },
+                "add_image": {
+                    "title": "Bild hinzufügen",
+                    "message": "In diesem Menü können Sie ein neues Bild zu einer neuen oder bestehenden Galerie hinzufügen.\nNachdem Sie das Bild geladen haben, können Sie die Seite und Kategorie des Bildes auswählen und angeben, ob es als neues Cover für die Galerie verwendet werden soll. Wenn es sich um eine neue Galerie handelt, müssen Sie den Namen in das entsprechende Textfeld eingeben."
+                },
+                "choice_side": {
+                    "title": "Seitenauswahl",
+                    "message": "Mit diesen Schaltflächen können Sie die auf dem Foto sichtbare Seite der Straßenbahn auswählen."
+                },
+                "choice_category": {
+                    "title": "Kategorieauswahl",
+                    "message": "Mit diesen Schaltflächen können Sie die Kategorie auswählen, die die Qualität des Bildes repräsentiert."
+                },
+                "default": {
+                    "title": "Cover festlegen",
+                    "message": "Mit dieser Schaltfläche können Sie festlegen, ob das neue Bild als Cover für diese Galerie im Sammlungsmenü verwendet wird."
+                },
+                "edit_image": {
+                    "title": "Bild bearbeiten",
+                    "message": "Dieses Menü bietet die gleichen Funktionen wie das Menü zum Hinzufügen von Bildern, mit der Ausnahme, dass der Benutzer das Bild löschen kann.\nEs wird ein Bestätigungsfenster angezeigt, und nach der Bestätigung ist diese Aktion nicht rückgängig zu machen."
+                },
+                "collection": {
+                    "title": "Sammlung",
+                    "message": "Im Sammlungsmenü, das Sie über das Buch im Hauptmenü erreichen können, können Sie den Fortschritt Ihrer Sammlung mit den Bildern sehen, die als Cover für jede Seite jeder Galerie festgelegt wurden.\nSie können auch zum Menü zum Hinzufügen von Bildern gelangen, indem Sie auf die entsprechenden Schaltflächen klicken."
+                },
+                "settings": {
+                    "title": "Einstellungen",
+                    "message": "Sie können auf das Einstellungsmenü zugreifen, indem Sie auf das Zahnradsymbol im Hauptmenü klicken.\nHier können Sie die Sprache der Anwendung ändern, Statistiken Ihrer Sammlung anzeigen und diese Anleitung aufrufen.\nSie können auch eine Sammlung importieren oder die aktuelle Sammlung exportieren. Bitte beachten Sie, dass beim Importieren einer neuen Sammlung die aktuelle Sammlung gelöscht wird."
+                }
+            }
+        }
+    },
+    "generic": {
+        "file_chooser": {
+            "cancel": "Abbrechen",
+            "load": "Laden"
+        },
+        "popup": {
+            "dict_buttons": {
+                "close": "Fenster schließen",
+                "yes": "Ja",
+                "no": "Nein"
+            },
+            "dict_messages": {
+                "delete_confirmation": [
+                    "Löschbestätigung",
+                    "Möchten Sie dieses Bild löschen?\n\nDieser Vorgang kann nicht rückgängig gemacht werden."
+                ],
+                "import_completed": [
+                    "Import abgeschlossen",
+                    "Die Sammlung wurde erfolgreich importiert."
+                ],
+                "export_completed": [
+                    "Export abgeschlossen",
+                    "Die Sammlung wurde erfolgreich exportiert."
+                ],
+                "error_gallery_name": [
+                    "Fehler im Galerienamen",
+                    "Der Galeriename existiert bereits. Bitte geben Sie einen neuen Namen ein."
+                ],
+                "error_no_side": [
+                    "Keine Seite ausgewählt",
+                    "Die Seite der Straßenbahn auf dem Foto, links oder rechts, wurde nicht ausgewählt."
+                ],
+                "error_no_category": [
+                    "Keine Kategorie ausgewählt",
+                    "Die Kategorie des Fotos, Gold, Silber oder Bronze, wurde nicht ausgewählt."
+                ]
+            }
+        }
+    }
+}
