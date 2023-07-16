@@ -71,16 +71,27 @@ class CollectionWindow(Screen):
 
     Methods
     -------
-    init_screen : initialize the screen for the display.
+    init_screen
+        Initialize the screen for the display.
 
-    build_image : create a single image on the screen.
+    build_image
+        Create a single image on the screen.
 
-    build_scrollview : build the scrollview with all images.
+    build_scrollview
+        Build the scrollview with all images.
 
-    add_image : open the image edition screen.
+    add_image
+        Open the image edition screen.
     """
 
     def __init__(self, **kw):
+        """
+        Initialisation of the class CollectionWindow.
+
+        Parameters
+        ----------
+        None
+        """
         super().__init__(**kw)
 
     font = StringProperty("Roboto")
@@ -91,6 +102,14 @@ class CollectionWindow(Screen):
     def init_screen(self):
         """
         Initialize the screen when it is opened to create all the components to display.
+        
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
         """
         self.ids.my_sv_layout.reset_screen()
         self.ids.top_menu_layout.ids.return_button.on_release = \
@@ -101,6 +120,22 @@ class CollectionWindow(Screen):
     def build_image(self, gallery: Gallery, side, height):
         """
         Load a single image from a gallery to display it on the screen.
+
+        Parameters
+        ----------
+        gallery : Gallery
+            Gallery containing the image to load
+
+        side : str
+            Side of the image
+
+        height : int
+            Height of the image
+
+        Returns
+        -------
+        image : Image from kivy.uix.image
+            Widget of the image
         """
         tramway_image: TramwayImage = gallery.get_default_image(side)
         if tramway_image.source != EMPTY_IMAGE_SOURCE:
@@ -124,7 +159,15 @@ class CollectionWindow(Screen):
 
     def build_scroll_view(self):
         """
-        Build the scrollview containing the images to display them on the screen
+        Build the scrollview containing the images to display them on the screen.
+
+        Parameters
+        ----------
+        None
+
+        Returns
+        -------
+        None
         """
         grid_layout_width = window_size[0]
         height = (grid_layout_width - self.label_height) / 3
@@ -227,6 +270,10 @@ class CollectionWindow(Screen):
         Parameters
         ----------
         gallery : Gallery
-            Gallery to open.
+            Gallery to open
+
+        Returns
+        -------
+        None
         """
         self.manager.init_screen("image_edition", gallery=gallery)
