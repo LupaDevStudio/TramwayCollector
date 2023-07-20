@@ -76,7 +76,7 @@
                 },
                 "settings": {
                     "title": "Paramètres",
-                    "message": "Vous pouvez accéder au menu paramètres en cliquant sur la roue dentelée du menu principal.\nVous pouvez changer ici la langue de l'application, observer les statistiques de votre collection, ainsi que consulter ce tutoriel.\nVous pouvez également importer une collection ou bien exporter celle en cours. Veuillez noter que lors de l'import d'une nouvelle collection celle en cours sera supprimée."
+                    "message": "Vous pouvez accéder au menu paramètres en cliquant sur la roue dentelée du menu principal.\nVous pouvez changer ici la langue de l'application, observer les statistiques de votre collection, ainsi que consulter ce tutoriel.\nVous pouvez également importer une collection ou bien partager celle en cours. Veuillez noter que lors de l'import d'une nouvelle collection celle en cours sera supprimée."
                 }
             }
         }

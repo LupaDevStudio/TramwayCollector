@@ -76,7 +76,7 @@
                 },
                 "settings": {
                     "title": "Settings",
-                    "message": "You can access the settings menu by clicking on the gear icon in the main menu.\nHere, you can change the language of the application, view the statistics of your collection, and consult this tutorial.\nYou can also import a collection or export the current one. Please note that when importing a new collection, the current one will be deleted."
+                    "message": "You can access the settings menu by clicking on the gear icon in the main menu.\nHere, you can change the language of the application, view the statistics of your collection, and consult this tutorial.\nYou can also import a collection or share the current one. Please note that when importing a new collection, the current one will be deleted."
                 }
             }
         }

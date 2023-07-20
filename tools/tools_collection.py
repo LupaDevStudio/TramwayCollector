@@ -20,7 +20,7 @@ from tools.tools import (
     DICT_BADGES_IMAGES,
     PATH_COLLECTION,
     PATH_TRAMWAY_IMAGES,
-    PATH_DATA_APP_FOLDER,
+    PATH_TEMP_FOLDER,
     load_json_file,
     save_json_file,
     check_if_name_exists,
@@ -296,6 +296,10 @@ def init_collection_image_folder():
     # Folder for tramway images
     if not os.path.exists(PATH_TRAMWAY_IMAGES):
         os.mkdir(path=PATH_TRAMWAY_IMAGES)
+
+    # Folder for temp image
+    if not os.path.exists(PATH_TEMP_FOLDER):
+        os.mkdir(path=PATH_TEMP_FOLDER)
 
     # Json file of the collection
     collection_file = "collection.json"
