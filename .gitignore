@@ -8,3 +8,4 @@ coverage.xml
 *.jks
 *.pem
 PlayStore
+bin
