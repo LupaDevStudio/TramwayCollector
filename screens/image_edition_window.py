@@ -261,25 +261,29 @@ class ImageEditionWindow(Screen):
         # Create the popup
         popup = ImprovedPopup(
             title=my_language.dict_messages["delete_confirmation"][0],
-            add_content=[])
+            add_content=[],
+            font=self.font)
 
         # Add the label, the progress bar and the button to close the window
         popup.add_label(
             text=my_language.dict_messages["delete_confirmation"][1],
             pos_hint={"x": 0.1, "y": 0.6},
-            size_hint=(0.8, 0.15)
+            size_hint=(0.8, 0.15),
+            font_name=self.font
         )
         popup.add_button(
             text=my_language.dict_buttons["yes"],
             pos_hint={"x": 0.1, "y": 0.25},
             size_hint=(0.35, 0.15),
-            on_release=partial(self.delete_image, popup)
+            on_release=partial(self.delete_image, popup),
+            font_name=self.font
         )
         popup.add_button(
             text=my_language.dict_buttons["no"],
             pos_hint={"x": 0.55, "y": 0.25},
             size_hint=(0.35, 0.15),
-            on_release=popup.dismiss
+            on_release=popup.dismiss,
+            font_name=self.font
         )
 
     def add_image(self):

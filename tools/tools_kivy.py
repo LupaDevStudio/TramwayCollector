@@ -223,16 +223,19 @@ def create_standard_popup(title_popup, message, button_message=my_language.dict_
         ("label", {
             "text": message,
             "pos_hint": {"x": 0.1, "y": 0.6},
-            "size_hint": (0.8, 0.15)
+            "size_hint": (0.8, 0.15),
+            "font_name": my_language.font
         })
     ]
     popup = ImprovedPopup(
         title=title_popup,
-        add_content=popup_content)
+        add_content=popup_content,
+        font=my_language.font)
     button = popup.add_button(
         text=button_message,
         pos_hint={"x": 0.2, "y": 0.25},
-        size_hint=(0.6, 0.15)
+        size_hint=(0.6, 0.15),
+        font_name=my_language.font
     )
     button.on_release = popup.dismiss
     button.focus = True
