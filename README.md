@@ -45,7 +45,7 @@ It also contains the following modules:
 
 ### For users
 
-To install the application, download it using [this link](https://gitlab.com/Agathe48/tramway-collector/-/raw/main/bin/tramwaycollector-1.0.0-armeabi-v7a-debug.apk?inline=false).
+To install the application, download it on the Play Store using [this link](https://play.google.com/store/apps/details?id=org.tramwaycollector).
 
 ### For developers
 
@@ -99,24 +99,32 @@ You will find in the settings a short tutorial explaining how to use the applica
 
 #### Compilation
 
-To launch the compilation of the application into an apk file :
+##### Debug version
+
+To launch the compilation of the application into a debug apk file :
 
 - Modify the path inside the spec file to match your own system configuration
 - Compile with the command : `buildozer -v android debug`
 - If an android smartphone is connected to your computer and the developer mode is activated on the device you can launch the application in debug mode and access the output using the command : `buildozer -v android deploy run logcat | grep python`
 - If your encounter a java heap space error, try this command to increase the maximum allowed size of files : `export GRADLE_OPTS="-Xms1724m -Xmx5048m -Dorg.gradle.jvmargs='-Xms1724m -Xmx5048m'"` 
-- To obtain a release version of the app, use the command : `buildozer android release`
-- You then need to generate a keystore and an upload key using android studio.
+
+##### Release version
+
+Once the debug version works, to share a clean version of the application, it is necessary to sign the package. To do this, you first need to create a key using these commands :
 
 ```bash
 keytool -genkey -v -keystore ~/keystores/TramwayCollector.keystore -alias TramwayCollector -keyalg RSA -keysize 2048 -validity 10000
 keytool -importkeystore -srckeystore ~/keystores/TramwayCollector.keystore -destkeystore ~/keystores/TramwayCollector.keystore -deststoretype pkcs12
+```
 
+You then have to export the variables containing the password and the location of your key in your terminal with these commands :
+
+```bash
 export P4A_RELEASE_KEYSTORE=~/keystores/TramwayCollector.keystore
 export P4A_RELEASE_KEYSTORE_PASSWD=
 export P4A_RELEASE_KEYALIAS_PASSWD=
 export P4A_RELEASE_KEYALIAS="TramwayCollector"
 ```
 
-!!! warning
-  Both passwords are the same here.
+You can then obtain a release version of the app using the command : `buildozer android release`
+
