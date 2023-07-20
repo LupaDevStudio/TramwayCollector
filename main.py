@@ -209,6 +209,8 @@ class MainApp(App, Widget):
             if len(screen_manager.list_former_screens) > 1:
                 self._app_window.children[0].current = screen_manager.list_former_screens.pop(
                 )
+                return True
+        return False
 
 
 # Run the application
