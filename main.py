@@ -37,6 +37,9 @@ from tools import (
     PATH_RESOURCES_FOLDER,
     PATH_KIVY_FOLDER
 )
+from tools.tools_kivy import (
+    ImprovedPopup
+)
 from screens import (
     MenuWindow,
     CollectionWindow,
@@ -205,10 +208,14 @@ class MainApp(App, Widget):
         None
         """
         if key == 27:
-            screen_manager: WindowManager = self._app_window.children[0]
-            if len(screen_manager.list_former_screens) > 1:
-                self._app_window.children[0].current = screen_manager.list_former_screens.pop(
-                )
+            widget = self._app_window.children[0]
+            if type(widget) == WindowManager:
+                if len(widget.list_former_screens) > 1:
+                    self._app_window.children[0].current = widget.list_former_screens.pop(
+                    )
+                    return True
+            elif type(widget) == ImprovedPopup:
+                widget.dismiss()
                 return True
         return False
 
