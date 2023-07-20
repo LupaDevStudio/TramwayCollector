@@ -5,6 +5,7 @@
 
 ### Python import ###
 
+import os
 import shutil
 import time
 from typing import Literal
@@ -124,8 +125,8 @@ class SettingsWindow(Screen):
         ss = SharedStorage()
         for shared_file in shared_file_list:
             self.private_files.append(ss.copy_from_shared(shared_file))
-        print(self.private_files)
-        time.sleep(0.1)
+        while not os.path.exists(self.private_files[0]):
+            time.sleep(0.1)
         self.choosed_status = "Done"
 
     def open_confirmation_popup(self):

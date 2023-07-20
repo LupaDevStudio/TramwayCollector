@@ -211,7 +211,8 @@ class ImageEditionWindow(Screen):
         ss = SharedStorage()
         for shared_file in shared_file_list:
             self.private_files.append(ss.copy_from_shared(shared_file))
-        time.sleep(0.1)
+        while not os.path.exists(self.private_files[0]):
+            time.sleep(0.1)
         self.load_image(None, self.private_files)
 
     def load_image(self, path, filename):
