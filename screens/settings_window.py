@@ -5,10 +5,10 @@
 
 ### Python import ###
 
-import os
 import shutil
 import time
 from typing import Literal
+from functools import partial
 
 ### Kivy imports ###
 
@@ -16,7 +16,6 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.image import Image
 from kivy.uix.popup import Popup
 from kivy.properties import StringProperty
-from kivy.clock import Clock
 
 ### Module imports ###
 
@@ -129,7 +128,34 @@ class SettingsWindow(Screen):
         time.sleep(0.1)
         self.choosed_status = "Done"
 
-    def show_file_explorer(self, mode: Literal["IMPORT", "EXPORT"]):
+    def open_confirmation_popup(self):
+        # Create the popup
+        popup = ImprovedPopup(
+            title=my_language.dict_messages["import_confirmation"][0],
+            add_content=[])
+
+        # Add the label, the progress bar and the button to close the window
+        popup.add_label(
+            text=my_language.dict_messages["import_confirmation"][1],
+            pos_hint={"x": 0.1, "y": 0.6},
+            size_hint=(0.8, 0.15)
+        )
+        popup.add_button(
+            text=my_language.dict_buttons["yes"],
+            pos_hint={"x": 0.1, "y": 0.25},
+            size_hint=(0.35, 0.15),
+            on_release=partial(self.show_file_explorer, "IMPORT", popup)
+        )
+        popup.add_button(
+            text=my_language.dict_buttons["no"],
+            pos_hint={"x": 0.55, "y": 0.25},
+            size_hint=(0.35, 0.15),
+            on_release=popup.dismiss
+        )
+
+    def show_file_explorer(self, mode: Literal["IMPORT", "EXPORT"], popup=None):
+        if popup is not None:
+            popup.dismiss()
         if MOBILE_MODE:
             self.chooser = Chooser(self.chooser_callback)
             if mode == "IMPORT":
