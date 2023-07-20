@@ -219,7 +219,6 @@ class MainApp(App, Widget):
                 widget.dismiss()
                 return True
             elif MOBILE_MODE and type(widget) == Chooser:
-                self.choosed_status = "None"
                 return True
         return False
 
