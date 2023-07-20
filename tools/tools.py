@@ -54,6 +54,10 @@ if MOBILE_MODE and not os.path.exists(PATH_SETTINGS):
     with open(PATH_SETTINGS, "w") as file:
         json.dump({"language": "english", "default_path_images": app_storage_path()},
                   file)
+elif not MOBILE_MODE and not os.path.exists(PATH_SETTINGS):
+    with open(PATH_SETTINGS, "w") as file:
+        json.dump({"language": "english", "default_path_images": "."},
+                  file)
 PATH_LANGUAGE = PATH_RESOURCES_FOLDER + "languages/"
 PATH_COLLECTION = PATH_DATA_APP_FOLDER + "collection/collection.json"
 PATH_TRAMWAY_IMAGES = PATH_DATA_APP_FOLDER + "collection/"
