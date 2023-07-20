@@ -202,7 +202,7 @@
             width: self.height
             pos_hint: {"x":0.8, "y":0.0875}
             on_release:
-                root.show_file_explorer("IMPORT")
+                root.open_confirmation_popup()
         Image:
             source: "resources/import.png"
             allow_stretch: True

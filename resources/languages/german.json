@@ -101,6 +101,10 @@
                     "Import abgeschlossen",
                     "Die Sammlung wurde erfolgreich importiert."
                 ],
+                "import_confirmation": [
+                    "Sammlung importieren",
+                    "Sie sind dabei, eine Sammlung zu importieren.\n\nDie bestehende Sammlung wird dann gelöscht und durch die neue ersetzt.\n\nMöchten Sie fortfahren?"
+                ],
                 "export_completed": [
                     "Export abgeschlossen",
                     "Die Sammlung wurde erfolgreich exportiert."

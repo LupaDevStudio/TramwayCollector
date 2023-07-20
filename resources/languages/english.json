@@ -101,6 +101,10 @@
                     "Import Completed",
                     "The collection has been successfully imported."
                 ],
+                "import_confirmation": [
+                    "Import a collection",
+                    "You are about to import a collection.\n\nThe existing collection will thus be deleted and replaced by the new one.\n\nWould you like to proceed?"
+                ],
                 "export_completed": [
                     "Export Completed",
                     "The collection has been successfully exported."

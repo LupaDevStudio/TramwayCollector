@@ -101,6 +101,10 @@
                     "Importazione completata",
                     "La collezione è stata importata correttamente."
                 ],
+                "import_confirmation": [
+                    "Importare una collezione",
+                    "Si sta per importare una raccolta.\n\nLa collezione esistente verrà eliminata e sostituita da quella nuova.\n\nVolete continuare?"
+                ],
                 "export_completed": [
                     "Esportazione completata",
                     "La collezione è stata esportata correttamente."
