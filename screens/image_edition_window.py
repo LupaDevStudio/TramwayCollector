@@ -22,6 +22,7 @@ import time
 from kivy.uix.screenmanager import Screen
 from kivy.uix.popup import Popup
 from kivy.properties import StringProperty, BooleanProperty
+from kivy.clock import Clock
 
 ### Module imports ###
 
@@ -189,11 +190,20 @@ class ImageEditionWindow(Screen):
     def dismiss_popup(self):
         self.file_chooser.dismiss()
 
+    def wait_for_image(self, *args):
+        if self.choosed_status != "Done":
+            Clock.schedule_once(self.wait_for_image, 0.05)
+        else:
+            self.load_image(None, self.private_files)
+            self.choosed_status = "None"
+
     def show_load(self):
         if MOBILE_MODE:
-
+            self.choosed_status = "None"
             self.chooser = Chooser(self.chooser_callback)
             self.chooser.choose_content("image/*")
+            self.wait_for_image()
+
         else:
             content = LoadDialog(load=self.load_image,
                                  cancel=self.dismiss_popup,
@@ -211,13 +221,15 @@ class ImageEditionWindow(Screen):
         ss = SharedStorage()
         for shared_file in shared_file_list:
             self.private_files.append(ss.copy_from_shared(shared_file))
-        while not os.path.exists(self.private_files[0]):
-            time.sleep(0.1)
-        self.load_image(None, self.private_files)
+        # while not os.path.exists(self.private_files[0]):
+        #     time.sleep(0.1)
+        # self.load_image(None, self.private_files)
+        self.choosed_status = "Done"
 
     def load_image(self, path, filename):
         if not MOBILE_MODE:
             self.dismiss_popup()
+
         # Load the image for preview in the temp folder
         copy_as_square(filename[0], temp=True)
         self.path_preview_image = PATH_TEMP_IMAGE

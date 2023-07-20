@@ -17,6 +17,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.image import Image
 from kivy.uix.popup import Popup
 from kivy.properties import StringProperty
+from kivy.clock import Clock
 
 ### Module imports ###
 
@@ -120,13 +121,18 @@ class SettingsWindow(Screen):
         my_language.change_language()
         self.init_screen()
 
+    def wait_for_image(self, *args):
+        if self.choosed_status != "Done":
+            Clock.schedule_once(self.wait_for_image, 0.05)
+        else:
+            self.import_collection(None, self.private_files)
+            self.choosed_status = "None"
+
     def chooser_callback(self, shared_file_list):
         self.private_files = []
         ss = SharedStorage()
         for shared_file in shared_file_list:
             self.private_files.append(ss.copy_from_shared(shared_file))
-        while not os.path.exists(self.private_files[0]):
-            time.sleep(0.1)
         self.choosed_status = "Done"
 
     def open_confirmation_popup(self):
@@ -165,10 +171,7 @@ class SettingsWindow(Screen):
             self.chooser = Chooser(self.chooser_callback)
             if mode == "IMPORT":
                 self.chooser.choose_content("application/zip")
-                while self.choosed_status != "Done":
-                    time.sleep(0.1)
-                self.import_collection(None, self.private_files)
-                self.choosed_status = "None"
+                self.wait_for_image()
             else:
                 self.export_collection(None, None)
         else:
