@@ -35,9 +35,8 @@ from tools import (
     background_color,
     window_size,
     PATH_RESOURCES_FOLDER,
-    PATH_KIVY_FOLDER
-)
-from tools.tools_kivy import (
+    PATH_KIVY_FOLDER,
+    MOBILE_MODE,
     ImprovedPopup
 )
 from screens import (
@@ -47,6 +46,8 @@ from screens import (
     ImageEditionWindow,
     SettingsWindow
 )
+if MOBILE_MODE:
+    from androidstorage4kivy import Chooser  # type: ignore
 
 
 ######################
@@ -216,6 +217,9 @@ class MainApp(App, Widget):
                     return True
             elif type(widget) == ImprovedPopup:
                 widget.dismiss()
+                return True
+            elif MOBILE_MODE and type(widget) == Chooser:
+                self.choosed_status = "None"
                 return True
         return False
 
