@@ -23,5 +23,5 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pytest
       run: |
-        pytest --cov-fail-under=0 $(git ls-files '*.py')
-        coverage-badge
+        pytest --cov-fail-under=1 $(git ls-files '*.py')
+        
