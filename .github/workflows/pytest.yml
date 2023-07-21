@@ -21,7 +21,7 @@ jobs:
         pip install pytest-cov
         pip install coverage-badge
         pip install -r requirements.txt
-    - name: Analysing the code with pylint
+    - name: Analysing the code with pytest
       run: |
-        pytest $(git ls-files '*.py')
+        pytest --cov-fail-under=10 $(git ls-files '*.py')
         coverage-badge
