@@ -23,5 +23,5 @@ jobs:
     - name: Analysing the code with pytest
       run: |
         pytest --version
-        pytest -p no:warnings --cov-fail-under=10 $(git ls-files '*.py')
+        pytest -p no:warnings --cov-fail-under=10 .
         
