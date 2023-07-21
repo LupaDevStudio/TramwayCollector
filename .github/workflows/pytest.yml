@@ -23,5 +23,6 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pytest
       run: |
-        pytest $(git ls-files '*.py')
+        echo "hello"
+        pytest --cov-fail-under=80 $(git ls-files '*.py')
         
