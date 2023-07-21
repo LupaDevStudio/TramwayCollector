@@ -23,5 +23,6 @@ jobs:
         pip install -r requirements.txt
     - name: Analysing the code with pytest
       run: |
+        pytest --version
         pytest -p no:warnings --cov-fail-under=10 $(git ls-files '*.py')
         
