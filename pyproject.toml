@@ -26,5 +26,5 @@ disable = ["wrong-import-position",
     output-format = "pylint_report.CustomJsonReporter"
 
 
-# [tool.pytest.ini_options]
-# addopts = "--ignore=.buildozer --cov-report html:reports/coverage --cov-report xml --cov"
+[tool.pytest.ini_options]
+addopts = "--ignore=.buildozer --cov-report html:reports/coverage --cov-report xml --cov"
