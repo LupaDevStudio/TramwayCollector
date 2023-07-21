@@ -1,5 +1,6 @@
 # Tramway Collector
 
+![pylint pin](https://github.com/LupaDevStudio/TramwayCollector/actions/workflows/pylint.yml/badge.svg)
 ## Introduction
 
 The project is an application to collect photos of different kinds of tramways.
