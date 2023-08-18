@@ -208,7 +208,8 @@ class SettingsWindow(Screen):
         # Display a completion popup
         create_standard_popup(
             title_popup=my_language.dict_messages["import_completed"][0],
-            message=my_language.dict_messages["import_completed"][1]
+            message=my_language.dict_messages["import_completed"][1],
+            button_message=my_language.dict_buttons["close"]
         )
 
     def export_collection(self, path, filename):
@@ -238,7 +239,8 @@ class SettingsWindow(Screen):
         # Display a completion popup
         create_standard_popup(
             title_popup=my_language.dict_messages["export_completed"][0],
-            message=my_language.dict_messages["export_completed"][1]
+            message=my_language.dict_messages["export_completed"][1],
+            button_message=my_language.dict_buttons["close"]
         )
 
     def display_credits(self):
