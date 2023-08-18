@@ -9,7 +9,6 @@ Module tools of Tramway Collector
 
 import os
 import json
-from time import sleep
 from kivy import platform
 
 
@@ -20,7 +19,7 @@ from kivy import platform
 
 ### Version ###
 
-__version__ = "1.1.0"
+__version__ = "1.2.0"
 
 ### Mode ###
 
