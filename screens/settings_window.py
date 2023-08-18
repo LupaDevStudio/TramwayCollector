@@ -100,19 +100,19 @@ class SettingsWindow(Screen):
 
         # Get statistics
         statistics = my_collection.get_statistics()
-        self.statistics_nb_galleries = str(statistics["total"]) + \
+        self.statistics_nb_galleries = str(statistics["total"]) + " " + \
             detect_single_multiple_galleries(statistics["total"])
-        self.statistics_nb_left_gold = str(statistics["gold"][0]) + \
+        self.statistics_nb_left_gold = str(statistics["gold"][0]) + " " + \
             detect_single_multiple_galleries(statistics["gold"][0])
-        self.statistics_nb_right_gold = str(statistics["gold"][1]) + \
+        self.statistics_nb_right_gold = str(statistics["gold"][1]) + " " + \
             detect_single_multiple_galleries(statistics["gold"][1])
-        self.statistics_nb_left_silver = str(statistics["silver"][0]) + \
+        self.statistics_nb_left_silver = str(statistics["silver"][0]) + " " + \
             detect_single_multiple_galleries(statistics["silver"][0])
-        self.statistics_nb_right_silver = str(statistics["silver"][1]) + \
+        self.statistics_nb_right_silver = str(statistics["silver"][1]) + " " + \
             detect_single_multiple_galleries(statistics["silver"][1])
-        self.statistics_nb_left_bronze = str(statistics["bronze"][0]) + \
+        self.statistics_nb_left_bronze = str(statistics["bronze"][0]) + " " + \
             detect_single_multiple_galleries(statistics["bronze"][0])
-        self.statistics_nb_right_bronze = str(statistics["bronze"][1]) + \
+        self.statistics_nb_right_bronze = str(statistics["bronze"][1]) + " " + \
             detect_single_multiple_galleries(statistics["bronze"][1])
 
     def change_language(self):

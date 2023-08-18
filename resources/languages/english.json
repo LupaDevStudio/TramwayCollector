@@ -26,8 +26,8 @@
         "language": "Language",
         "statistics": {
             "title": "Statistics",
-            "gallery": " tramway",
-            "galleries": " tramways"
+            "gallery": "tramway",
+            "galleries": "tramways"
         },
         "import_collection": "Import collection",
         "export_collection": "Choose export folder",
