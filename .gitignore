@@ -1,7 +1,7 @@
 draft*
 *_test*
 __pycache__
-.coverage
+*.coverage
 coverage.xml
 .buildozer
 .vscode
