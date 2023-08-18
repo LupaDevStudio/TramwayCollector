@@ -1,7 +1,11 @@
 # Tramway Collector
 
-![pylint pin](https://github.com/LupaDevStudio/TramwayCollector/actions/workflows/pylint.yml/badge.svg)
-![pytest pin](https://github.com/LupaDevStudio/TramwayCollector/actions/workflows/pytest.yml/badge.svg)
+![License](https://img.shields.io/github/license/LupaDevStudio/TramwayCollector)
+![Pylint Badge](https://github.com/LupaDevStudio/TramwayCollector/actions/workflows/pylint.yml/badge.svg)
+![Pytest coverage](https://raw.githubusercontent.com/LupaDevStudio/TramwayCollector/coverage-badge/coverage.svg?raw=true)
+![Download Badge](https://img.shields.io/github/downloads/LupaDevStudio/TramwayCollector/total.svg)
+
+
 ## Introduction
 
 The project is an application to collect photos of different kinds of tramways.

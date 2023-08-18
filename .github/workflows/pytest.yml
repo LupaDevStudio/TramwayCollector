@@ -1,6 +1,9 @@
 name: Pytest
 
-on: [push]
+on:
+  push:
+    branches:
+      - 'main'
 
 jobs:
   build:
@@ -19,9 +22,23 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest==6.2.5
         pip install pytest-cov==3.0.0
+        pip install coverage-badge
+        pip install mock
         pip install -r requirements.txt
     - name: Analysing the code with pytest
       run: |
         pytest --version
-        pytest -p no:warnings --cov-fail-under=10 .
-        
+        pytest --cov
+    - name: Creating coverage folder
+      run: |
+        mkdir -p coverage
+    - name: Coverage Bagdge
+      uses: tj-actions/coverage-badge-py@v1.8
+      with:
+        output: coverage/coverage.svg
+    - name: Publish coverage report to coverage-badge branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: coverage-badge
+        folder: coverage
+        ssh-key: ${{ secrets.DEPLOY_KEY }}

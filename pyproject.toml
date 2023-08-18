@@ -1,30 +1,23 @@
 [build-system]
-requires = ["Pillow==9.5.0", "Kivy==2.1.0"]
-build-backend = "buildozer"
+requires = ["Kivy==2.1.0"]
+build-backend = "Pyinstaller"
 
 [tool.pylint]
-recursive= "y"
+recursive = "y"
 load-plugins = "pylint_report"
-ignore-patterns = ["draft*",".buildozer"]
-disable = ["wrong-import-position",
-    "useless-parent-delegation",
-    "no-member",
-    "no-name-in-module"]
+ignore-patterns = ["draft*", "venv", "build", "dist", "old*"]
+disable = ["wrong-import-position", "no-member", "no-name-in-module"]
 
-    [tool.pylint.basic]
-    # Add names that will always be accepted by pylint
-    good-names = ["i", "j", "k", "x", "y", "_"]
+[tool.pylint.basic]
+# Add names that will always be accepted by pylint
+good-names = ["i", "j", "k", "x", "y", "_"]
 
-    # [tool.pylint.imports]
-    # import-graph= "imports_all.png"
+[tool.pylint.reports]
+output-format = "pylint_report.CustomJsonReporter"
+reports = "y"
 
-    [tool.pylint.reports]
-    output-format = "pylint_report.CustomJsonReporter"
-    reports = "y"
+# [tool.pytest.ini_options]
+# addopts = "--ignore=.buildozer --cov-report html:reports/coverage --cov-report xml --cov"
 
-    [tool.pylint.options]
-    output-format = "pylint_report.CustomJsonReporter"
-
-
-[tool.pytest.ini_options]
-addopts = "--ignore=.buildozer --cov-report html:reports/coverage --cov-report xml --cov"
+# To generate html report with pytlint : pylint . | pylint_report > reports/linting/report.html
+# To generate html reports with pytest : pytest . --ignore=.buildozer --cov-report html:reports/coverage --cov-report xml --cov
