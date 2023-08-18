@@ -28,7 +28,7 @@ jobs:
     - name: Analysing the code with pytest
       run: |
         pytest --version
-        pytest --cov .
+        pytest --cov -vv .
     - name: Creating coverage folder
       run: |
         mkdir -p coverage
