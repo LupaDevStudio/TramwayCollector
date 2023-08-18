@@ -304,7 +304,8 @@ class ImageEditionWindow(Screen):
         if self.ids.name_gallery_input.text == "":
             create_standard_popup(
                 title_popup=my_language.dict_messages["error_gallery_name"][0],
-                message=my_language.dict_messages["error_gallery_name"][1]
+                message=my_language.dict_messages["error_gallery_name"][1],
+                button_message=my_language.dict_buttons["close"]
             )
             return
 
@@ -312,7 +313,8 @@ class ImageEditionWindow(Screen):
         if self.side_tramway == "None":
             create_standard_popup(
                 title_popup=my_language.dict_messages["error_no_side"][0],
-                message=my_language.dict_messages["error_no_side"][1]
+                message=my_language.dict_messages["error_no_side"][1],
+                button_message=my_language.dict_buttons["close"]
             )
             return
 
@@ -320,7 +322,8 @@ class ImageEditionWindow(Screen):
         if self.category == "None":
             create_standard_popup(
                 title_popup=my_language.dict_messages["error_no_category"][0],
-                message=my_language.dict_messages["error_no_category"][1]
+                message=my_language.dict_messages["error_no_category"][1],
+                button_message=my_language.dict_buttons["close"]
             )
             return
 
@@ -347,7 +350,8 @@ class ImageEditionWindow(Screen):
             except ValueError:
                 create_standard_popup(
                     title_popup=my_language.dict_messages["error_gallery_name"][0],
-                    message=my_language.dict_messages["error_gallery_name"][1]
+                    message=my_language.dict_messages["error_gallery_name"][1],
+                    button_message=my_language.dict_buttons["close"]
                 )
                 return
 

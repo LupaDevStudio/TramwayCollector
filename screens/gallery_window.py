@@ -200,7 +200,8 @@ class GalleryWindow(Screen):
             has_changed = False
             create_standard_popup(
                 title_popup=my_language.dict_messages["error_gallery_name"][0],
-                message=my_language.dict_messages["error_gallery_name"][1]
+                message=my_language.dict_messages["error_gallery_name"][1],
+                button_message=my_language.dict_buttons["close"]
             )
             return
         if has_changed:
