@@ -3,10 +3,10 @@
         "new_gallery": "Nouvelle galerie"
     },
     "gallery": {
-        "gallery_name_hint_text": " Nom de la galerie"
+        "gallery_name_hint_text": "Nom de la galerie"
     },
     "image_edition": {
-        "gallery_name_hint_text": " Nom de la galerie",
+        "gallery_name_hint_text": "Nom de la galerie",
         "browse_button": "Charger...",
         "delete_button": "Supprimer",
         "left_side": "Côté gauche",
@@ -26,8 +26,8 @@
         "language": "Langue",
         "statistics": {
             "title": "Statistiques",
-            "gallery": " tramway",
-            "galleries": " tramways"
+            "gallery": "tramway",
+            "galleries": "tramways"
         },
         "import_collection": "Importer une collection",
         "export_collection": "Choix du dossier d'export",

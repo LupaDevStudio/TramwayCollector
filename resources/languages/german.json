@@ -3,10 +3,10 @@
         "new_gallery": "Neue Galerie"
     },
     "gallery": {
-        "gallery_name_hint_text": " Galeriename"
+        "gallery_name_hint_text": "Galeriename"
     },
     "image_edition": {
-        "gallery_name_hint_text": " Galeriename",
+        "gallery_name_hint_text": "Galeriename",
         "browse_button": "Durchsuchen...",
         "delete_button": "Löschen",
         "left_side": "Linke Seite",
@@ -26,8 +26,8 @@
         "language": "Sprache",
         "statistics": {
             "title": "Statistiken",
-            "gallery": " Galerie",
-            "galleries": " Galerien"
+            "gallery": "Galerie",
+            "galleries": "Galerien"
         },
         "import_collection": "Sammlung importieren",
         "export_collection": "Exportordner auswählen",
