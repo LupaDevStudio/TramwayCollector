@@ -25,8 +25,13 @@ from kivy.app import App
 
 ### Module imports ###
 
-from tools import (
-    clean_unused_images,
+from tools.tools import (
+    PATH_RESOURCES_FOLDER,
+    PATH_KIVY_FOLDER,
+    MOBILE_MODE
+)
+from tools.tools_collection import clean_unused_images
+from tools.tools_kivy import (
     highlight_text_color,
     pink_color,
     blue_color,
@@ -34,9 +39,6 @@ from tools import (
     Window,
     background_color,
     window_size,
-    PATH_RESOURCES_FOLDER,
-    PATH_KIVY_FOLDER,
-    MOBILE_MODE,
     ImprovedPopup
 )
 from screens import (
