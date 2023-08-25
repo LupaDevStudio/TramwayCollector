@@ -175,5 +175,3 @@ def test_collection():
         "silver": [0, 0],
         "bronze": [0, 1]
     }
-
-    print(my_collection)
