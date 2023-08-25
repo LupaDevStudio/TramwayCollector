@@ -337,7 +337,7 @@ class ImageEditionWindow(Screen):
         self.tramway_image.side = self.side_tramway
         self.tramway_image.category = self.category
         self.tramway_image.plus_plus = self.bool_plus_plus
-        if self.bool_default:
+        if self.bool_default or self.tramway_image.default:
             self.gallery.update_default_image(
                 tramway_image=self.tramway_image
             )
