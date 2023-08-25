@@ -111,11 +111,11 @@ DICT_BADGES_IMAGES = {
 }
 
 DICT_LANGUAGE_CORRESPONDANCE = {
-    "french": "Français",
     "english": "English",
     "german": "Deutsch",
-    "italian": "Italiano",
     "spanish": "Español",
+    "french": "Français",
+    "italian": "Italiano",
     "japanese": "Japanese"
 }
 
