@@ -29,7 +29,7 @@ source.exclude_dirs = test, bin, .buildozer, data/collection, data/collection_co
 source.exclude_patterns = data/collection.json,*.gitignore, requirements.txt
 
 # (str) Application versioning (method 1)
-version = 1.1.0
+version = 1.2.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -283,8 +283,11 @@ android.allow_backup = True
 # (bool) disables the compilation of py to pyc/pyo files when packaging
 # android.no-compile-pyo = True
 
-# (str) The format used to package the app for release mode (aab or apk).
+# (str) The format used to package the app for release mode (aab or apk or aar).
 android.release_artifact = aab
+
+# (str) The format used to package the app for debug mode (apk or aar).
+android.debug_artifact = apk
 
 #
 # Python for android (p4a) specific
