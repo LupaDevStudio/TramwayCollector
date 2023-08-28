@@ -194,6 +194,10 @@ class ImageEditionWindow(Screen):
         if self.choosed_status != "Done":
             Clock.schedule_once(self.wait_for_image, 0.05)
         else:
+            # Load the image for preview in the temp folder
+            copy_as_square(self.private_files[0], temp=True)
+            self.path_preview_image = PATH_TEMP_IMAGE
+            self.ids.preview_image.reload()
             self.load_image(None, self.private_files)
             self.choosed_status = "None"
 
@@ -230,10 +234,10 @@ class ImageEditionWindow(Screen):
         if not MOBILE_MODE:
             self.dismiss_popup()
 
-        # Load the image for preview in the temp folder
-        copy_as_square(filename[0], temp=True)
-        self.path_preview_image = PATH_TEMP_IMAGE
-        self.ids.preview_image.reload()
+            # Load the image for preview in the temp folder
+            copy_as_square(filename[0], temp=True)
+            self.path_preview_image = PATH_TEMP_IMAGE
+            self.ids.preview_image.reload()
 
         # Disable the add button
         self.ids.add_button.disabled = False
