@@ -19,6 +19,8 @@
         "load_image": "Bild laden"
     },
     "settings": {
+        "and": "und",
+        "images": "Bilder",
         "credits_popup": {
             "title_popup": "Credits",
             "label_popup": "Diese Anwendung wurde entwickelt von:\n - Paul\n - Agathe\n\nVersion ###"

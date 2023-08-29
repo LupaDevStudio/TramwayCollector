@@ -247,6 +247,9 @@ class Collection():
 
     def get_statistics(self):
         dict_statistics = {}
+        dict_statistics["total_images"] = 0
+        for gallery in self.list_galleries:
+            dict_statistics["total_images"] += len(gallery.list_images)
         dict_statistics["total"] = len(self.list_galleries)
         dict_statistics["total_sides"] = [
             self.get_statistics_side("left"),
