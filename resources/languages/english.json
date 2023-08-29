@@ -19,6 +19,8 @@
         "load_image": "Load image"
     },
     "settings": {
+        "and": "and",
+        "images": "images",
         "credits_popup": {
             "title_popup": "Credits",
             "label_popup": "This application was developed by:\n - Paul\n - Agathe\n\nVersion ###"

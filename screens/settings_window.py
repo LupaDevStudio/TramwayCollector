@@ -101,7 +101,9 @@ class SettingsWindow(Screen):
         # Get statistics
         statistics = my_collection.get_statistics()
         self.statistics_nb_galleries = str(statistics["total"]) + " " + \
-            detect_single_multiple_galleries(statistics["total"])
+            detect_single_multiple_galleries(statistics["total"]) + " " + self.TEXT_SETTINGS["and"]\
+            + " " + str(statistics["total_images"]) + \
+            " " + self.TEXT_SETTINGS["images"]
         self.statistics_nb_left_gold = str(statistics["gold"][0]) + " " + \
             detect_single_multiple_galleries(statistics["gold"][0])
         self.statistics_nb_right_gold = str(statistics["gold"][1]) + " " + \

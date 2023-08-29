@@ -19,6 +19,8 @@
         "load_image": "画像を読み込む"
     },
     "settings": {
+        "and": "と",
+        "images": "ピクチャー",
         "credits_popup": {
             "title_popup": "クレジット",
             "label_popup": "このアプリケーションは以下の開発者によって開発されました:\n - Paul\n - Agathe\n\nバージョン ###"
