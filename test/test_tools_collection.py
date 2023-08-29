@@ -170,6 +170,7 @@ def test_collection():
 
     assert my_collection.get_statistics() == {
         "total": 2,
+        "total_images": 4,
         "total_sides": [2, 1],
         "gold": [2, 0],
         "silver": [0, 0],
